@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { useNavigate, useSearchParams } from "react-router";
 import axios from "axios";
@@ -62,7 +62,6 @@ function Checkout() {
   
   const [isValidating, setIsValidating] = useState(false);
 
-  const [loadingBookingStatus, setLoadingBookingStatus]  = useState<boolean | null>(true) ; 
   useEffect(() => {
     const fetchdetails = async () => {
       try {
@@ -324,7 +323,7 @@ export const InputData = ({
     
   }
   return (
-    <div className="py-5 px-6 bg-[#EFEFEF] rounded-lg">
+    <div className="py-5 px-6 bg-card-secondary rounded-lg">
       <div className="flex items-center gap-4 mb-4">
         <input placeholder="John Doe " className="w-1/2 p-2  bg-card-accent rounded-sm placeholder:text-[#727272]" onChange={(e)=>setName(e.target.value)}></input>
 

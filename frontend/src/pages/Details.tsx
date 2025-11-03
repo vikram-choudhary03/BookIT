@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import  { useEffect, useMemo, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { useNavigate, useParams } from "react-router";
 import axios from "axios";
@@ -23,16 +23,7 @@ interface ExperienceWithSlots {
   }>;
 }
 
-interface Slots {
-  slots: Array<{
-    id: number;
-    date: string;
-    time: string;
-    total_capacity: number;
-    booked_count: number;
-    available_count: number;
-  }>;
-}
+
 
 export const Details = () => {
   const { id } = useParams();
@@ -136,7 +127,7 @@ export const Details = () => {
               />
 
               <p className="text-lg font-medium mb-3">About</p>
-              <p className="py-2 px-3 bg- w-full bg-about rounded text-[#838383] bg-[#EFEFEF] tracking-wide">
+              <p className="py-2 px-3 bg- w-full bg-about rounded text-[#838383] bg-card-secondary tracking-wide">
                 Scenic routes, trained guides, and safety briefing. Minimum age
                 10.
               </p>
@@ -273,19 +264,6 @@ export const DisplaySlotDates = ({
       setSelectedDate(dates[0]);
     }
   }, [dates, selectedDate]);
-
-  const times = useMemo(() => {
-    const timeString12hr = slots.map((slot) =>
-      new Date("1970-01-01T" + slot.time + "Z").toLocaleTimeString("en-US", {
-        timeZone: "UTC",
-        hour12: true,
-        hour: "numeric",
-        minute: "numeric",
-      })
-    );
-
-    return [...new Set(timeString12hr)];
-  }, [slots]);
 
   const timeForSelectedDate = selectedDate
     ? Object.keys(slotsByDateAndTime[selectedDate] || {}).sort((a, b) => {
