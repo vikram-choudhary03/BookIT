@@ -3,6 +3,9 @@ import { Navbar } from "../components/Navbar";
 import { useNavigate, useSearchParams } from "react-router";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 interface ExperienceWithSlots {
   id: number;
   name: string;
@@ -64,7 +67,7 @@ function Checkout() {
     const fetchdetails = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/experience/${experienceId}`
+          `${API_URL}/api/experience/${experienceId}`
         );
 
         setExperience(res.data);
@@ -103,7 +106,7 @@ function Checkout() {
 
       setIsValidating(true); 
         
-        const res  = await axios.post("http://localhost:5000/api/promo/validate" , {
+        const res  = await axios.post(`${API_URL}/api/promo/validate` , {
           promo_code : promoCode, 
           total_price : experience!.price
         })
@@ -127,7 +130,7 @@ function Checkout() {
     let totalPrice = Math.floor(total)+ Math.floor(taxes) ; 
     try {
 
-      const res   = await axios.post("http://localhost:5000/api/bookings" , {
+      const res   = await axios.post(`${API_URL}/api/bookings` , {
         slot_id : slotId , 
         name, 
         email, 

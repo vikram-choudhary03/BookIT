@@ -3,6 +3,9 @@ import { Navbar } from "../components/Navbar";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
+
+const API_URL = import.meta.env.VITE_API_URL;
+
 interface Experience {
   id: number;
   name: string;
@@ -21,7 +24,7 @@ export const Home = () => {
   useEffect(() => {
     const getExperiences = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/experiences");
+        const res = await axios.get(`${API_URL}/api/experiences`);
         console.log(res.data);
         setExperiences(res.data);
         setLoading(false);

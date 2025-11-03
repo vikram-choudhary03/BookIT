@@ -3,6 +3,9 @@ import { Navbar } from "../components/Navbar";
 import { useNavigate, useParams } from "react-router";
 import axios from "axios";
 
+
+const API_URL = import.meta.env.VITE_API_URL;
+
 interface ExperienceWithSlots {
   id: number;
   name: string;
@@ -52,7 +55,7 @@ export const Details = () => {
     const getExperiencebyID = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/experience/${id}`
+          `${API_URL}/api/experience/${id}`
         );
 
         console.log(res.data);
