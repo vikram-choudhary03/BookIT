@@ -1,4 +1,4 @@
-# BookIt: Experiences & Slots Booking Platform
+# Fullstack Blog Platform
 
 A complete full-stack web application for browsing, selecting, and booking travel experiences. Users can explore experiences, view real-time slot availability, apply promo codes, and complete secure bookings with an intuitive, responsive interface.
 
@@ -6,8 +6,8 @@ A complete full-stack web application for browsing, selecting, and booking trave
 
 ## 🌐 Live Demo
 
-- **Frontend:** [Your Vercel URL]
-- **Backend API:** [Your Railway/Render URL]
+- **Frontend:** [https://bookit-t66z.vercel.app](https://bookit-t66z.vercel.app)
+- **Backend API:** [https://bookit-uw0s.onrender.com](https://bookit-uw0s.onrender.com)
 - **GitHub Repository:** [BookIT](https://github.com/vikram-choudhary03/BookIT.git)
 ---
 
@@ -89,10 +89,24 @@ cd bookit-frontend
 
 **2. Install dependencies:**
 ```bash
+cp .env.example .env
+```
+**3. **Update .env with real values:**
+```
+VITE_API_URL=http://localhost:5000/api  (for local dev)
+```
+
+**5. **Or for production (Vercel):**
+```
+VITE_API_URL=https://bookit-uw0s.onrender.com
+```
+
+**6. Install dependencies:**
+```bash
 npm install
 ```
 
-**3. Start development server:**
+**7. Start development server:**
 ```bash
 npm run dev
 ```
