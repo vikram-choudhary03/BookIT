@@ -6,7 +6,7 @@ A complete full-stack web application for browsing, selecting, and booking trave
 
 ## 🌐 Live Demo
 
-- **Frontend:** [https://bookit-t66z.vercel.app](https://bookit-t66z.vercel.app)
+- **Frontend:** [https://book-it-wt2p.vercel.app/](https://book-it-wt2p.vercel.app/)
 - **Backend API:** [https://bookit-uw0s.onrender.com](https://bookit-uw0s.onrender.com)
 - **GitHub Repository:** [BookIT](https://github.com/vikram-choudhary03/BookIT.git)
 ---
