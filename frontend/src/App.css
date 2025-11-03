@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "@flaticon/flaticon-uicons/css/all/all";
+
+@import "tailwindcss";
+
+
+@theme {  
+    --color-card-primary: #F0F0F0;
+    --color-card-secondary:#EFEFEF ; 
+    --color-card-accent : #D6D6D6;
+    --color-card-about : #EEEEEE;
+
+    --color-input-primary : #EDEDED ; 
+    --color-input-secondary: #DDDDDD ; 
+
+   
+    --color-canvas : #F9F9F9 ;
+
+    --color-button-primary : #FFD643;
+    --color-button-secondary : #161616;
+    --color-button-gray : #D7D7D7 ; 
+
+    --color-slot-full : #CCCCCC;
+
+
+    --font-inter : "Inter" , sans-serif ; 
+    
+    
+    
+}
