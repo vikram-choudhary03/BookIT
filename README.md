@@ -1,4 +1,4 @@
-# Fullstack Blog Platform
+# BookIT
 
 A complete full-stack web application for browsing, selecting, and booking travel experiences. Users can explore experiences, view real-time slot availability, apply promo codes, and complete secure bookings with an intuitive, responsive interface.
 
