@@ -6,7 +6,8 @@ export const Navbar = () => {
     <div className="w-full py-4 px-20  bg-canvas shadow-lg flex justify-between items-center">
      
         <Link to="/">
-          <img src={logo} alt="Logo" className="w-20 "></img>
+          {/* <img src={logo} alt="Logo" className="w-20 "></img> */}
+          <h2 className="text-2xl italic font-bold leading-1 tracking-wide ">BookIT</h2>
         </Link>
 
         <div className="flex  gap-4  justify-betweenitems-center  ">
